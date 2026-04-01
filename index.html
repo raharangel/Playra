@@ -5,170 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Playra</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: #f5f5f5;
-      padding: 40px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      background: #fff;
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-    }
-
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 50px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .btn-outline {
-      border: 1px solid #ddd;
-      padding: 10px 18px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .hero-left {
-      flex: 1;
-    }
-
-    .hero-left h1 {
-      font-size: 56px;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #111;
-    }
-
-    .hero-right {
-      width: 320px;
-    }
-
-    .cta {
-      background: #f1efe9;
-      padding: 14px 20px;
-      border-radius: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      cursor: pointer;
-      margin-bottom: 15px;
-    }
-
-    .cta span {
-      font-size: 18px;
-    }
-
-    .hero-desc {
-      font-size: 13px;
-      color: #777;
-      line-height: 1.6;
-    }
-
-    /* BANNER */
-    .banner {
-      margin-top: 40px;
-      height: 220px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #ffe7c7, #e8ffb7);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .banner::after {
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      background: repeating-linear-gradient(
-        120deg,
-        rgba(255, 120, 60, 0.5) 0px,
-        rgba(255, 120, 60, 0.5) 2px,
-        transparent 2px,
-        transparent 40px
-      );
-      transform: rotate(20deg);
-    }
-
-    /* FEATURES */
-    .features {
-      display: flex;
-      margin-top: 40px;
-      gap: 40px;
-    }
-
-    .feature {
-      flex: 1;
-      display: flex;
-      gap: 15px;
-    }
-
-    .icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      background: #f1efe9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-    }
-
-    .feature h3 {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-
-    .feature p {
-      font-size: 13px;
-      color: #777;
-      line-height: 1.5;
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
@@ -191,19 +29,19 @@
     <!-- HERO -->
     <div class="hero">
       <div class="hero-left">
-        <h1>Gaming Doesn't Starts here.<Br>It Evolves here..
+        <h1>
+          Gaming doesn't start here.<br>
+          It evolves here.
         </h1>
       </div>
 
       <div class="hero-right">
         <div class="cta">
-          Get Started
-          <span>↗</span>
+          Get Started <span>↗</span>
         </div>
 
         <p class="hero-desc">
-          Playra centralizes your media experience into one seamless platform,
-          giving you full control over playback, performance, and personalization.
+          Playra centralizes your media experience into one seamless platform.
         </p>
       </div>
     </div>
@@ -215,30 +53,37 @@
     <div class="features">
 
       <div class="feature">
-        <div class="icon"></div>
+        <div class="icon">🎮</div>
         <div>
-          <h3>Use Player with your stack</h3>
-          <p>
-            Integrate seamlessly across platforms including web, mobile,
-            and desktop environments.
-          </p>
+          <h3>Works everywhere</h3>
+          <p>Play across devices with seamless experience.</p>
         </div>
       </div>
 
       <div class="feature">
-        <div class="icon"></div>
+        <div class="icon">⚡</div>
         <div>
-          <h3>Security & privacy</h3>
-          <p>
-            Advanced encryption and secure playback ensure your data and
-            content stay protected at all times.
-          </p>
+          <h3>Fast Performance</h3>
+          <p>Enjoy smooth and lag-free experience.</p>
         </div>
       </div>
 
     </div>
 
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search Pokémon...">
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading">Loading...</div>
+
+    <!-- DATA GRID -->
+    <div class="grid" id="grid"></div>
+
   </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
