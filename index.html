@@ -1,63 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Playra</title><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playra | Explore Pokémon</title>
-    <meta name="description" content="Search and discover Pokémon data in real time with Playra.">
-    <!-- Google Fonts for modern typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playra</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Playra</div>
-        <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Explore the World of <span class="highlight">Pokémon</span></h1>
-            <p>Search and discover Pokémon data in real time with our dynamic Pokédex</p>
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search a Pokémon..." aria-label="Search Pokémon">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </div>
-        </div>
-    </header>
+<header class="navbar">
+  <h1 class="logo">Playra</h1>
+  <button id="themeToggle">🌙</button>
+</header>
 
-    <!-- Main Content Section -->
-    <main class="main-content">
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p>Catching Pokémon data...</p>
-        </div>
-        
-        <div id="pokemon-grid" class="pokemon-grid">
-            <!-- Pokémon cards will be injected here dynamically by JavaScript -->
-        </div>
-    </main>
+<section class="hero">
+  <h2>Explore Pokémon</h2>
+  <input type="text" id="search" placeholder="Search Pokémon...">
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Playra. All Rights Reserved.</p>
-    </footer>
+<section class="main">
+  <p id="info"></p>
+  <div id="grid" class="grid"></div>
+</section>
 
-    <!-- Link to external JavaScript file -->
-    <script src="script.js"></script>
+<footer>
+  <p>© 2026 Playra</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
